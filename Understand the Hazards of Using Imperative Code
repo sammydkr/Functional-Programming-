@@ -1,0 +1,2 @@
+const tabsBeforeIndex = this.tabs.slice(0, index); // 
+ const tabsAfterIndex = this.tabs.slice(index + 1);
