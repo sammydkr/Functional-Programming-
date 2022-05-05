@@ -1,0 +1,16 @@
+Write your own Array.prototype.myMap(), which should behave exactly like Array.prototype.map().
+we should not use the built-in map method. The Array instance can be accessed in the myMap method using this.
+
+
+const s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  var newArray = [];
+  this.forEach(a => newArray.push(callback(a)))
+  
+  return newArray;
+};
+
+const new_s = s.myMap(function(item) {
+  return item * 2;
+});
