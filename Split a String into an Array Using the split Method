@@ -1,0 +1,15 @@
+Here are two examples that split one string by spaces, then another by digits using a regular expression:
+
+const str = "Hello World";
+const bySpace = str.split(" ");
+
+const otherString = "How9are7you2today";
+const byDigits = otherString.split(/\d/);
+
+OR
+
+function splitify(str) {
+  return str.split(/\W/)
+}
+
+splitify("Hello World,I-am code");
