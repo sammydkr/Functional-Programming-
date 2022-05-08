@@ -1,0 +1,35 @@
+Here's an example:
+
+function unCurried(x, y) {
+  return x + y;
+}
+
+function curried(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+
+const curried = x => y => x + y
+
+curried(1)(2)
+
+Similarly, partial application can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments. Here's an example:
+
+function impartial(x, y, z) {
+  return x + y + z;
+}
+
+const partialFn = impartial.bind(this, 1, 2);
+partialFn(10); // 13
+
+
+function add(x) {
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+    }
+  }
+}
+
+add(10)(20)(30);
